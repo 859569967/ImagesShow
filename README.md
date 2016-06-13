@@ -34,3 +34,8 @@ ImagesShow
      
 
 3、点击编辑和展示按钮实现相应功能
+
+4、截图
+
+ ![image](https://github.com/niexiaobo/ImagesShow/blob/master/%E5%9B%BE%E8%A1%A8/imagesShow/chartUntitled.gif)
+
