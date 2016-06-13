@@ -37,6 +37,6 @@ ImagesShow
 
 4、截图
 
- ![image](https://github.com/niexiaobo/ImagesShow/blob/master/imagesShow/Simulatoedit.png)
- ![image](https://github.com/niexiaobo/ImagesShow/blob/master/imagesShow/Simulatorshow.png)
- ![image](https://github.com/niexiaobo/ImagesShow/blob/master/imagesShow/Simulatorshowbig.png)
+ ![image](https://github.com/niexiaobo/ImagesShow/blob/master/SimulatoImages/Simulatoedit.png)
+ ![image](https://github.com/niexiaobo/ImagesShow/blob/master/SimulatoImages/Simulatorshow.png)
+ ![image](https://github.com/niexiaobo/ImagesShow/blob/master/SimulatoImages/Simulatorshowbig.png)
