@@ -3,8 +3,8 @@ ImagesShow
 图片选择器：
 1、从相册添加图片，并可以设置最大图片数
 
-//初始化
--(SelectImageView *)SelectImageView{
+        //初始化
+        -(SelectImageView *)SelectImageView{
         if (!_SelectImageView) {
             _SelectImageView=[[SelectImageView alloc]init];
             _SelectImageView.delegate=self;
@@ -14,7 +14,7 @@ ImagesShow
         }
         return _SelectImageView;
         
-    }
+        }
 
 
 2、默认初始化时有图片：本地或者后台请求的网络图片
@@ -32,3 +32,5 @@ ImagesShow
             
         }
      
+
+3、点击编辑和展示按钮实现相应功能
