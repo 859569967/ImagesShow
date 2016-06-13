@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-
+#pragma mark- 文件夹路径
+@property (strong, nonatomic) NSString *folderPath;
 @end
 

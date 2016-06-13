@@ -16,8 +16,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
+    [self initFolder];
+    
     // Override point for customization after application launch.
     return YES;
+}
+#pragma mark 初始化文件夹路径
+- (void)initFolder{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSLog(@"documentsDirectory:%@",documentsDirectory);
+    self.folderPath = [documentsDirectory stringByAppendingPathComponent:@"temp"];
+    NSLog(@"folderPath:%@",self.folderPath);
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    [fileManager createDirectoryAtPath:self.folderPath withIntermediateDirectories:YES attributes:nil error:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

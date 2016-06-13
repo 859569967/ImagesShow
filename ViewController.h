@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class SelectImageView;
 
 @interface ViewController : UIViewController
 
-
+@property (strong, nonatomic) NSArray *file_pathArray;
 @end
 
