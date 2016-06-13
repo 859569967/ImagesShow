@@ -196,30 +196,36 @@
     [self resetImages];
 }
 -(void)reset_closebnt{
+    //默认编辑状态
+    [self resetCloseBntEdit:YES];
     
+}
+-(void)resetCloseBntEdit:(BOOL)isEdit{
     for (UIView *subView in self.subviews) {
         if ([subView isKindOfClass:[UIButton class]]) {
             UIButton *But = (UIButton*)subView;
             But.hidden=YES;
         }
     }
-
-    for (int i=1001; i<_PhotoimgsArray.count+1001; i++) {
-        for (UIView *subView in self.subviews) {
-            if ([subView isKindOfClass:[UIButton class]]) {
-                UIButton *But = (UIButton*)subView;
-                
-                if (But.tag==i) {
+    if (isEdit) {
+        for (int i=1001; i<_PhotoimgsArray.count+1001; i++) {
+            for (UIView *subView in self.subviews) {
+                if ([subView isKindOfClass:[UIButton class]]) {
+                    UIButton *But = (UIButton*)subView;
                     
-                    But.hidden=NO;
+                    if (But.tag==i) {
+                        
+                        But.hidden=NO;
+                    }
+                    
                 }
-                
             }
         }
+
     }
     
 }
-     
+
 - (void)resetImages{
     //设置图片
     for (int i=0; i<_max_Image_show; i++) {
@@ -264,6 +270,21 @@
         
     }
 }
+
+- (void)resetImagesEdit:(BOOL)isEdit{
+    for (int i = 0; i < self.PhotoimgsArray.count+1; ++i) {
+        if (i >= _max_Image_show) {
+            break;
+        }
+        UIImageView *tempImgView = [self.imageViewsArray objectAtIndex:i];
+        
+        if (i == self.PhotoimgsArray.count) {
+            tempImgView.hidden=!isEdit;
+        }
+    }
+}
+
+
 - (void)sendfilePath_Array {
 //    int ImgX=13;
     int ImgY=10;
@@ -490,6 +511,13 @@
     
 }
 
+#pragma mark - 设置当前编辑状态
+- (void)resetEditState:(BOOL)isEdit {
+    
+    [self resetCloseBntEdit:isEdit];
+    [self resetImagesEdit:isEdit];
+}
+
 #pragma mark - 保存图片至沙盒
 - (void) saveImage:(UIImage *)currentImage withName:(NSString *)imageName
 {
@@ -578,7 +606,17 @@
     
     [_delegate performSelector:@selector(Close_keyboard)];
     
+//    [self.imageViewsArray
+    NXBShowImageView *tesnt=[[NXBShowImageView alloc]init];
     
+    [tesnt InitWith_superVC:(UIViewController*)_delegate imageList:self.imageViewsArray Current_index:ges.view.tag];
+    //显示单张图片
+//    [self showSingleImage:ges];
+
+    
+}
+#pragma mark - 显示单张图片
+-(void)showSingleImage:(UIGestureRecognizer *)ges{
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     _BlankImgV=[[UIView alloc]initWithFrame:window.frame];
     _BlankImgV.backgroundColor=[UIColor colorWithRed:1.f/255.f green:1.f/255.f blue:1.f/255.f alpha:1.0];
@@ -587,17 +625,14 @@
     UIImageView *tempImgView =[[UIImageView alloc]initWithFrame:window.frame];
     tempImgView.contentMode = UIViewContentModeScaleAspectFit;
     
-        tempImgView.image=tempImgV.image;
-        [_BlankImgV addSubview:tempImgView];
-        [window addSubview:_BlankImgV];
-        
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(HideImage)];
-        
-        [_BlankImgV addGestureRecognizer:tap];
-
+    tempImgView.image=tempImgV.image;
+    [_BlankImgV addSubview:tempImgView];
+    [window addSubview:_BlankImgV];
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(HideImage)];
+    
+    [_BlankImgV addGestureRecognizer:tap];
 }
-
 -(void)HideImage{
     _BlankImgV.hidden=YES;
     [_BlankImgV removeFromSuperview];

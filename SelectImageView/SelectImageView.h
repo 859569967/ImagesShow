@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "ZYQAssetPickerController.h"
-
+#import "NXBShowImageView.h"
 
 //协议定义
 @protocol SelectPhotosDelegate <NSObject>
@@ -56,4 +56,7 @@
 
 #pragma  mark  显示网络图片
 -(void)resetImagesWithNetUrlFilePathArray:(NSArray*)FilePathArray;
+
+#pragma mark - 设置当前编辑状态
+- (void)resetEditState:(BOOL)isEdit;
 @end

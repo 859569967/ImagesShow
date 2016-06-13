@@ -13,6 +13,7 @@
 @interface ViewController ()<SelectPhotosDelegate>
 @property (nonatomic, strong)SelectImageView *SelectImageView;
 @property (nonatomic, strong)NSMutableArray *file_path_array;
+@property (nonatomic, strong)UIButton *editEnableButton;
 @end
 
 @implementation ViewController
@@ -21,11 +22,11 @@
     [super viewDidLoad];
     
     [self SelectImageViewInit];
-      
+    [self.view addSubview:self.editEnableButton];
 }
 
 - (void)SelectImageViewInit{
-    self.SelectImageView.frame=CGRectMake(0, 100, Screen_width, 74);
+    self.SelectImageView.frame=CGRectMake(0, 150, Screen_width, 74);
     self.SelectImageView.hidden=NO;
     
     _file_pathArray=@[@"http://www.xiufa.com/BJUI/plugins/kindeditor_4.1.10/attached/image/20160427/20160427020344_22714.png",
@@ -47,8 +48,25 @@
         
     }
 }
-
-
+- (UIButton *)editEnableButton {
+    if (!_editEnableButton) {
+        _editEnableButton = [[UIButton alloc]initWithFrame:CGRectMake(50, 80, 60, 40)];
+        [_editEnableButton setTitle:@"编辑" forState:UIControlStateSelected];
+        [_editEnableButton setTitle:@"展示" forState:UIControlStateNormal];
+        [_editEnableButton setTitleColor:[UIColor blueColor] forState:UIControlStateSelected];
+        [_editEnableButton addTarget:self action:@selector(editEnableButtonClick) forControlEvents:UIControlEventTouchUpInside];
+        [_editEnableButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [_editEnableButton setBackgroundColor:[UIColor yellowColor]];
+        self.editEnableButton.selected=YES;
+    }
+    return _editEnableButton;
+}
+#pragma mark- 点击按钮
+- (void)editEnableButtonClick{
+    self.editEnableButton.selected=!self.editEnableButton.selected;
+    [self.SelectImageView resetEditState:self.editEnableButton.selected];
+    
+}
 -(SelectImageView *)SelectImageView{
     if (!_SelectImageView) {
         _SelectImageView=[[SelectImageView alloc]init];
