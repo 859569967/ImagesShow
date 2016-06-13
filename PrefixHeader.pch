@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  ImagesShow
+//
+//  Created by 博彦科技-聂小波 on 16/6/12.
+//  Copyright © 2016年 bobo. All rights reserved.
+//
+
+#import "AppDelegate.h"
+#import "UIImageView+WebCache.h"
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#define Screen_height  [[UIScreen mainScreen] bounds].size.height
+#define Screen_width  [[UIScreen mainScreen] bounds].size.width
+#define ScreenBounds   [[UIScreen mainScreen] bounds]
+
+#define ApplicationDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
+
+//#import "ZYQAssetPickerController.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
