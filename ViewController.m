@@ -53,6 +53,7 @@
     if (!_SelectImageView) {
         _SelectImageView=[[SelectImageView alloc]init];
         _SelectImageView.delegate=self;
+        //初始化并设置最大图片数4
         [_SelectImageView ImageView_init_max_imgs2:4];
         [self.view addSubview:_SelectImageView];
     }
