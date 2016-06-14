@@ -609,7 +609,7 @@
 //    [self.imageViewsArray
     NXBShowImageView *tesnt=[[NXBShowImageView alloc]init];
     
-    [tesnt InitWith_superVC:(UIViewController*)_delegate imageList:self.imageViewsArray Current_index:ges.view.tag];
+    [tesnt InitWith_superVC:(UIViewController*)_delegate imageList:self.ImgfilePath_Array Current_index:ges.view.tag];
     //显示单张图片
 //    [self showSingleImage:ges];
 
