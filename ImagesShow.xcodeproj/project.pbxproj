@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F54450811D461E3A00951D21 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F544506D1D461E3A00951D21 /* TZAssetCell.m */; };
+		F54450821D461E3A00951D21 /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F544506F1D461E3A00951D21 /* TZAssetModel.m */; };
+		F54450831D461E3A00951D21 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F54450711D461E3A00951D21 /* TZImageManager.m */; };
+		F54450841D461E3A00951D21 /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F54450721D461E3A00951D21 /* TZImagePickerController.bundle */; };
+		F54450851D461E3A00951D21 /* TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F54450741D461E3A00951D21 /* TZImagePickerController.m */; };
+		F54450861D461E3A00951D21 /* TZPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F54450761D461E3A00951D21 /* TZPhotoPickerController.m */; };
+		F54450871D461E3A00951D21 /* TZPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F54450781D461E3A00951D21 /* TZPhotoPreviewCell.m */; };
+		F54450881D461E3A00951D21 /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F544507A1D461E3A00951D21 /* TZPhotoPreviewController.m */; };
+		F54450891D461E3A00951D21 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F544507C1D461E3A00951D21 /* TZVideoPlayerController.m */; };
+		F544508A1D461E3A00951D21 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = F544507E1D461E3A00951D21 /* UIView+Layout.m */; };
+		F544508B1D461E3A00951D21 /* ZMView.m in Sources */ = {isa = PBXBuildFile; fileRef = F54450801D461E3A00951D21 /* ZMView.m */; };
+		F544508D1D461E4800951D21 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F544508C1D461E4800951D21 /* AssetsLibrary.framework */; };
 		F5CBDC061D0D610600C32C85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBDC051D0D610600C32C85 /* main.m */; };
 		F5CBDC091D0D610600C32C85 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBDC081D0D610600C32C85 /* AppDelegate.m */; };
 		F5CBDC0C1D0D610600C32C85 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBDC0B1D0D610600C32C85 /* ViewController.m */; };
@@ -58,6 +70,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F544506C1D461E3A00951D21 /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
+		F544506D1D461E3A00951D21 /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
+		F544506E1D461E3A00951D21 /* TZAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetModel.h; sourceTree = "<group>"; };
+		F544506F1D461E3A00951D21 /* TZAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetModel.m; sourceTree = "<group>"; };
+		F54450701D461E3A00951D21 /* TZImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageManager.h; sourceTree = "<group>"; };
+		F54450711D461E3A00951D21 /* TZImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageManager.m; sourceTree = "<group>"; };
+		F54450721D461E3A00951D21 /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TZImagePickerController.bundle; sourceTree = "<group>"; };
+		F54450731D461E3A00951D21 /* TZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImagePickerController.h; sourceTree = "<group>"; };
+		F54450741D461E3A00951D21 /* TZImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImagePickerController.m; sourceTree = "<group>"; };
+		F54450751D461E3A00951D21 /* TZPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPickerController.h; sourceTree = "<group>"; };
+		F54450761D461E3A00951D21 /* TZPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPickerController.m; sourceTree = "<group>"; };
+		F54450771D461E3A00951D21 /* TZPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewCell.h; sourceTree = "<group>"; };
+		F54450781D461E3A00951D21 /* TZPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewCell.m; sourceTree = "<group>"; };
+		F54450791D461E3A00951D21 /* TZPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewController.h; sourceTree = "<group>"; };
+		F544507A1D461E3A00951D21 /* TZPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewController.m; sourceTree = "<group>"; };
+		F544507B1D461E3A00951D21 /* TZVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZVideoPlayerController.h; sourceTree = "<group>"; };
+		F544507C1D461E3A00951D21 /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
+		F544507D1D461E3A00951D21 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		F544507E1D461E3A00951D21 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		F544507F1D461E3A00951D21 /* ZMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMView.h; sourceTree = "<group>"; };
+		F54450801D461E3A00951D21 /* ZMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMView.m; sourceTree = "<group>"; };
+		F544508C1D461E4800951D21 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		F5CBDC011D0D610600C32C85 /* ImagesShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagesShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CBDC051D0D610600C32C85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5CBDC071D0D610600C32C85 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -126,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F544508D1D461E4800951D21 /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,9 +181,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F544506A1D461E3A00951D21 /* TZImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				F544506B1D461E3A00951D21 /* TZImagePickerController */,
+				F544507F1D461E3A00951D21 /* ZMView.h */,
+				F54450801D461E3A00951D21 /* ZMView.m */,
+			);
+			path = TZImagePicker;
+			sourceTree = "<group>";
+		};
+		F544506B1D461E3A00951D21 /* TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				F544506C1D461E3A00951D21 /* TZAssetCell.h */,
+				F544506D1D461E3A00951D21 /* TZAssetCell.m */,
+				F544506E1D461E3A00951D21 /* TZAssetModel.h */,
+				F544506F1D461E3A00951D21 /* TZAssetModel.m */,
+				F54450701D461E3A00951D21 /* TZImageManager.h */,
+				F54450711D461E3A00951D21 /* TZImageManager.m */,
+				F54450721D461E3A00951D21 /* TZImagePickerController.bundle */,
+				F54450731D461E3A00951D21 /* TZImagePickerController.h */,
+				F54450741D461E3A00951D21 /* TZImagePickerController.m */,
+				F54450751D461E3A00951D21 /* TZPhotoPickerController.h */,
+				F54450761D461E3A00951D21 /* TZPhotoPickerController.m */,
+				F54450771D461E3A00951D21 /* TZPhotoPreviewCell.h */,
+				F54450781D461E3A00951D21 /* TZPhotoPreviewCell.m */,
+				F54450791D461E3A00951D21 /* TZPhotoPreviewController.h */,
+				F544507A1D461E3A00951D21 /* TZPhotoPreviewController.m */,
+				F544507B1D461E3A00951D21 /* TZVideoPlayerController.h */,
+				F544507C1D461E3A00951D21 /* TZVideoPlayerController.m */,
+				F544507D1D461E3A00951D21 /* UIView+Layout.h */,
+				F544507E1D461E3A00951D21 /* UIView+Layout.m */,
+			);
+			path = TZImagePickerController;
+			sourceTree = "<group>";
+		};
 		F5CBDBF81D0D610600C32C85 = {
 			isa = PBXGroup;
 			children = (
+				F544508C1D461E4800951D21 /* AssetsLibrary.framework */,
 				F5CBDC3D1D0D678600C32C85 /* PrefixHeader.pch */,
 				F5CBDC031D0D610600C32C85 /* ImagesShow */,
 				F5CBDC1D1D0D610600C32C85 /* ImagesShowTests */,
@@ -170,6 +242,7 @@
 		F5CBDC031D0D610600C32C85 /* ImagesShow */ = {
 			isa = PBXGroup;
 			children = (
+				F544506A1D461E3A00951D21 /* TZImagePicker */,
 				F5CBDC481D0E4CF800C32C85 /* SDWebImage */,
 				F5CBDC441D0D6A8A00C32C85 /* SelectImageView */,
 				F5CBDC3E1D0D6A8000C32C85 /* ZYQAssetPickerController */,
@@ -447,6 +520,7 @@
 				F5CBDC141D0D610600C32C85 /* LaunchScreen.storyboard in Resources */,
 				F5CBDC111D0D610600C32C85 /* Assets.xcassets in Resources */,
 				F5CBDC0F1D0D610600C32C85 /* Main.storyboard in Resources */,
+				F54450841D461E3A00951D21 /* TZImagePickerController.bundle in Resources */,
 				F5CBDC421D0D6A8000C32C85 /* ZYQAssetPicker.Bundle in Resources */,
 				F5CBDC6F1D0E4CF900C32C85 /* LICENSE in Resources */,
 			);
@@ -476,25 +550,35 @@
 				F5CBDC7C1D0E4CF900C32C85 /* UIImageView+HighlightedWebCache.m in Sources */,
 				F5CBDC0C1D0D610600C32C85 /* ViewController.m in Sources */,
 				F5CBDC781D0E4CF900C32C85 /* SDWebImagePrefetcher.m in Sources */,
+				F54450871D461E3A00951D21 /* TZPhotoPreviewCell.m in Sources */,
+				F54450851D461E3A00951D21 /* TZImagePickerController.m in Sources */,
 				F5CBDC091D0D610600C32C85 /* AppDelegate.m in Sources */,
 				F5CBDC741D0E4CF900C32C85 /* SDWebImageDecoder.m in Sources */,
 				F5CBDC751D0E4CF900C32C85 /* SDWebImageDownloader.m in Sources */,
+				F544508A1D461E3A00951D21 /* UIView+Layout.m in Sources */,
 				F5CBDC061D0D610600C32C85 /* main.m in Sources */,
 				F5CBDC771D0E4CF900C32C85 /* SDWebImageManager.m in Sources */,
+				F54450891D461E3A00951D21 /* TZVideoPlayerController.m in Sources */,
 				F5CBDC791D0E4CF900C32C85 /* UIButton+WebCache.m in Sources */,
 				F5CBDC7B1D0E4CF900C32C85 /* UIImage+MultiFormat.m in Sources */,
 				F5CBDC7D1D0E4CF900C32C85 /* UIImageView+WebCache.m in Sources */,
 				F5CBDC711D0E4CF900C32C85 /* README.md in Sources */,
 				F5CBDC7E1D0E4CF900C32C85 /* UIView+WebCacheOperation.m in Sources */,
+				F54450831D461E3A00951D21 /* TZImageManager.m in Sources */,
 				F5CBDC761D0E4CF900C32C85 /* SDWebImageDownloaderOperation.m in Sources */,
+				F54450861D461E3A00951D21 /* TZPhotoPickerController.m in Sources */,
 				F5CBDC7A1D0E4CF900C32C85 /* UIImage+GIF.m in Sources */,
 				F5CBDC731D0E4CF900C32C85 /* SDWebImageCompat.m in Sources */,
 				F5CBDC431D0D6A8000C32C85 /* ZYQAssetPickerController.m in Sources */,
+				F544508B1D461E3A00951D21 /* ZMView.m in Sources */,
 				F5CBDC881D0E8C7000C32C85 /* NXBShowImageView.m in Sources */,
+				F54450821D461E3A00951D21 /* TZAssetModel.m in Sources */,
 				F5CBDC8B1D0E8C7000C32C85 /* PhotoCollection.m in Sources */,
 				F5CBDC701D0E4CF900C32C85 /* NSData+ImageContentType.m in Sources */,
 				F5CBDC8A1D0E8C7000C32C85 /* PhotoCell.m in Sources */,
+				F54450811D461E3A00951D21 /* TZAssetCell.m in Sources */,
 				F5CBDC471D0D6A8A00C32C85 /* SelectImageView.m in Sources */,
+				F54450881D461E3A00951D21 /* TZPhotoPreviewController.m in Sources */,
 				F5CBDC891D0E8C7000C32C85 /* NXBShowImageViewController.m in Sources */,
 				F5CBDC721D0E4CF900C32C85 /* SDImageCache.m in Sources */,
 			);

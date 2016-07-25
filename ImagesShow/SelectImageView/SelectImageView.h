@@ -8,13 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+//三方1ZYQAsset
 #import "ZYQAssetPickerController.h"
 #import "NXBShowImageView.h"
+
+//三方2Assets
+#import <AssetsLibrary/AssetsLibrary.h>
+#import "TZImagePickerController.h"
+#import "ZMView.h"
+#import <Photos/Photos.h>
+
 
 //协议定义
 @protocol SelectPhotosDelegate <NSObject>
 
 -(void)addPicker:(ZYQAssetPickerController *)picker;          //UIImagePickerController
+-(void)addPicker2:(TZImagePickerController *)picker;
+
 -(void)addUIImagePicker:(UIImagePickerController *)picker;
 
 
@@ -23,7 +33,7 @@
 @end
 
 
-@interface SelectImageView : UIView<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIScrollViewDelegate,ZYQAssetPickerControllerDelegate>
+@interface SelectImageView : UIView<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIScrollViewDelegate,ZYQAssetPickerControllerDelegate,TZImagePickerControllerDelegate>
 //下拉菜单
 @property (nonatomic, strong)UIActionSheet *myActionSheet;
 @property (nonatomic, strong)NSString *filePath;

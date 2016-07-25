@@ -365,8 +365,8 @@
         NSLog(@"模拟其中无法打开照相机,请在真机中使用");
     }
 }
-//打开相册，可以多选
--(void)localPhoto{
+//打开相册1，可以多选
+-(void)localPhoto2{
     
     
     ZYQAssetPickerController *picker = [[ZYQAssetPickerController alloc]init];
@@ -386,6 +386,63 @@
     
     [self.delegate addPicker:picker];
 }
+
+//打开相册2，可以多选
+-(void)localPhoto{
+    
+    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:_maximumImage delegate:self];
+    imagePickerVc.allowPickingOriginalPhoto = NO;
+    imagePickerVc.allowPickingVideo = NO;
+    NSMutableArray<NSString*> *imagePaths = [[NSMutableArray alloc] init];
+    ZMView *zmView = [[ZMView alloc]init];
+    [imagePickerVc setDidFinishPickingPhotosWithInfosHandle:^(NSArray<UIImage *> *photos,NSArray *assets,BOOL isSelectOriginalPhoto,NSArray<NSDictionary *> *infos){
+        
+        int index = 0;
+        __block NSInteger totalCount = photos.count;
+        __block NSInteger curIndex = 0;
+        for(NSDictionary* dic in infos){
+            UIImage* photo = [photos objectAtIndex:index];
+            NSURL* url = [dic objectForKey:@"PHImageFileURLKey"];
+            __block NSString* path = [url absoluteString];
+            PHAsset* asset = assets[index];
+            [asset valueForKey:@"filename"];
+            __block NSString* filename = [path lastPathComponent];
+            if(filename == nil){
+                [asset requestContentEditingInputWithOptions:nil completionHandler:^(PHContentEditingInput *contentEditingInput, NSDictionary *info){
+                    
+                    //add
+                    NSString *jpgname = [NSString stringWithFormat:@"%d%ld.jpg",(int)[[NSDate new] timeIntervalSince1970],(long)curIndex];
+                    path = [zmView saveImageToLocalimage:photo filename:jpgname index:0];
+                    [_ImgfilePath_Array addObject:path];
+                    [_PhotoimgsArray addObject:photo];
+                    
+                    curIndex++;
+                    if(curIndex == totalCount){
+                        [self resetImages];
+                    }
+                }];
+            }else{
+                path = [zmView saveImageToLocalimage:photo filename:filename];
+                [imagePaths addObject:path];
+                
+                //add
+                NSString *jpgname = [NSString stringWithFormat:@"%d%ld.jpg",(int)[[NSDate new] timeIntervalSince1970],(long)curIndex];
+                path = [zmView saveImageToLocalimage:photo filename:jpgname index:0];
+                [_ImgfilePath_Array addObject:path];
+                [_PhotoimgsArray addObject:photo];
+                
+                curIndex++;
+                if(curIndex == totalCount){
+                    [self resetImages];
+                }
+            }
+            index++;
+        }
+    }];
+    UIViewController *delegateVC = (UIViewController *) self.delegate;
+    [delegateVC presentViewController:imagePickerVc animated:YES completion:nil];
+}
+
 #pragma  mark   -ZYQAssetPickerController Delegate
 
 /*
