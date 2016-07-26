@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface NXBShowImageViewController : UIViewController
-@property (nonatomic,strong)NSMutableArray *imageList;
-@property (nonatomic,assign)int Current_index;
+@property(nonatomic, strong) NSMutableArray *imageList;
+@property(nonatomic, assign) int currentIndex;
 @end

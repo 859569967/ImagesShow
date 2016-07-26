@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhotoCollection : UICollectionView<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface PhotoCollection
+    : UICollectionView <UICollectionViewDataSource,
+                        UICollectionViewDelegateFlowLayout>
 
-@property (nonatomic,copy)NSArray *imgArray;
+@property(nonatomic, copy) NSArray *imgArray;
 
 @end

@@ -27,8 +27,6 @@
 		F5CBDC141D0D610600C32C85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5CBDC121D0D610600C32C85 /* LaunchScreen.storyboard */; };
 		F5CBDC1F1D0D610600C32C85 /* ImagesShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBDC1E1D0D610600C32C85 /* ImagesShowTests.m */; };
 		F5CBDC2A1D0D610600C32C85 /* ImagesShowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBDC291D0D610600C32C85 /* ImagesShowUITests.m */; };
-		F5CBDC421D0D6A8000C32C85 /* ZYQAssetPicker.Bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5CBDC3F1D0D6A8000C32C85 /* ZYQAssetPicker.Bundle */; };
-		F5CBDC431D0D6A8000C32C85 /* ZYQAssetPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBDC411D0D6A8000C32C85 /* ZYQAssetPickerController.m */; };
 		F5CBDC471D0D6A8A00C32C85 /* SelectImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBDC461D0D6A8A00C32C85 /* SelectImageView.m */; };
 		F5CBDC6F1D0E4CF900C32C85 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5CBDC491D0E4CF800C32C85 /* LICENSE */; };
 		F5CBDC701D0E4CF900C32C85 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBDC4B1D0E4CF800C32C85 /* NSData+ImageContentType.m */; };
@@ -109,9 +107,6 @@
 		F5CBDC291D0D610600C32C85 /* ImagesShowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagesShowUITests.m; sourceTree = "<group>"; };
 		F5CBDC2B1D0D610600C32C85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5CBDC3D1D0D678600C32C85 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		F5CBDC3F1D0D6A8000C32C85 /* ZYQAssetPicker.Bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZYQAssetPicker.Bundle; sourceTree = "<group>"; };
-		F5CBDC401D0D6A8000C32C85 /* ZYQAssetPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYQAssetPickerController.h; sourceTree = "<group>"; };
-		F5CBDC411D0D6A8000C32C85 /* ZYQAssetPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYQAssetPickerController.m; sourceTree = "<group>"; };
 		F5CBDC451D0D6A8A00C32C85 /* SelectImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectImageView.h; sourceTree = "<group>"; };
 		F5CBDC461D0D6A8A00C32C85 /* SelectImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectImageView.m; sourceTree = "<group>"; };
 		F5CBDC491D0E4CF800C32C85 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -245,7 +240,6 @@
 				F544506A1D461E3A00951D21 /* TZImagePicker */,
 				F5CBDC481D0E4CF800C32C85 /* SDWebImage */,
 				F5CBDC441D0D6A8A00C32C85 /* SelectImageView */,
-				F5CBDC3E1D0D6A8000C32C85 /* ZYQAssetPickerController */,
 				F5CBDC071D0D610600C32C85 /* AppDelegate.h */,
 				F5CBDC081D0D610600C32C85 /* AppDelegate.m */,
 				F5CBDC0A1D0D610600C32C85 /* ViewController.h */,
@@ -283,16 +277,6 @@
 				F5CBDC2B1D0D610600C32C85 /* Info.plist */,
 			);
 			path = ImagesShowUITests;
-			sourceTree = "<group>";
-		};
-		F5CBDC3E1D0D6A8000C32C85 /* ZYQAssetPickerController */ = {
-			isa = PBXGroup;
-			children = (
-				F5CBDC3F1D0D6A8000C32C85 /* ZYQAssetPicker.Bundle */,
-				F5CBDC401D0D6A8000C32C85 /* ZYQAssetPickerController.h */,
-				F5CBDC411D0D6A8000C32C85 /* ZYQAssetPickerController.m */,
-			);
-			path = ZYQAssetPickerController;
 			sourceTree = "<group>";
 		};
 		F5CBDC441D0D6A8A00C32C85 /* SelectImageView */ = {
@@ -521,7 +505,6 @@
 				F5CBDC111D0D610600C32C85 /* Assets.xcassets in Resources */,
 				F5CBDC0F1D0D610600C32C85 /* Main.storyboard in Resources */,
 				F54450841D461E3A00951D21 /* TZImagePickerController.bundle in Resources */,
-				F5CBDC421D0D6A8000C32C85 /* ZYQAssetPicker.Bundle in Resources */,
 				F5CBDC6F1D0E4CF900C32C85 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,7 +552,6 @@
 				F54450861D461E3A00951D21 /* TZPhotoPickerController.m in Sources */,
 				F5CBDC7A1D0E4CF900C32C85 /* UIImage+GIF.m in Sources */,
 				F5CBDC731D0E4CF900C32C85 /* SDWebImageCompat.m in Sources */,
-				F5CBDC431D0D6A8000C32C85 /* ZYQAssetPickerController.m in Sources */,
 				F544508B1D461E3A00951D21 /* ZMView.m in Sources */,
 				F5CBDC881D0E8C7000C32C85 /* NXBShowImageView.m in Sources */,
 				F54450821D461E3A00951D21 /* TZAssetModel.m in Sources */,

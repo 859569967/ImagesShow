@@ -8,7 +8,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 @interface ZMView : NSObject
--(NSString*) saveImageToLocalimage:(UIImage*)image filename:(NSString*)filename;
+- (NSString *)saveImageToLocalimage:(UIImage *)image
+                           filename:(NSString *)filename;
 #pragma mark - 把图片保存到本地路径
--(NSString*) saveImageToLocalimage:(UIImage*)image filename:(NSString*)filename index:(int)index;
+- (NSString *)saveImageToLocalimage:(UIImage *)image
+                           filename:(NSString *)filename
+                              index:(int)index;
 @end

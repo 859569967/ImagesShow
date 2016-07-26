@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhotoCell : UICollectionViewCell<UIScrollViewDelegate>
+@interface PhotoCell : UICollectionViewCell <UIScrollViewDelegate>
 
-@property (nonatomic,copy)id imgName;
-
+@property(nonatomic, copy) id imgName;
 
 @end

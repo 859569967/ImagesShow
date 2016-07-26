@@ -8,65 +8,48 @@
 
 #import <UIKit/UIKit.h>
 
-//三方1ZYQAsset
-#import "ZYQAssetPickerController.h"
 #import "NXBShowImageView.h"
-
-//三方2Assets
-#import <AssetsLibrary/AssetsLibrary.h>
 #import "TZImagePickerController.h"
 #import "ZMView.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 #import <Photos/Photos.h>
-
 
 //协议定义
 @protocol SelectPhotosDelegate <NSObject>
 
--(void)addPicker:(ZYQAssetPickerController *)picker;          //UIImagePickerController
--(void)addPicker2:(TZImagePickerController *)picker;
-
--(void)addUIImagePicker:(UIImagePickerController *)picker;
-
-
--(void)ImgfilePath_Array:(NSMutableArray *)filePath_Array heights:(float)heights;
--(void)Close_keyboard;
+- (void)imgfilePathArray:(NSMutableArray *)filePathArray
+                  heights:(float)heights;
 @end
 
-
-@interface SelectImageView : UIView<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIScrollViewDelegate,ZYQAssetPickerControllerDelegate,TZImagePickerControllerDelegate>
+@interface SelectImageView
+    : UIView <UIActionSheetDelegate, UIImagePickerControllerDelegate,
+              UINavigationControllerDelegate, UIScrollViewDelegate,
+              TZImagePickerControllerDelegate>
 //下拉菜单
-@property (nonatomic, strong)UIActionSheet *myActionSheet;
-@property (nonatomic, strong)NSString *filePath;
-
-@property (nonatomic, strong) NSMutableArray *PhotoimgsArray;
-@property (nonatomic, strong) NSMutableArray *ImgfilePath_Array;
-
-@property (nonatomic, strong) NSMutableArray *imageViewsArray;
+@property(nonatomic, strong) UIActionSheet *myActionSheet;
+@property(nonatomic, strong) NSString *filePath;
+@property(nonatomic, strong) NSMutableArray *photoImgsArray;
+@property(nonatomic, strong) NSMutableArray *imgFilePathArray;
+@property(nonatomic, strong) NSMutableArray *imageViewsArray;
 
 //最多可显示最大图片数
-@property (nonatomic, assign) int max_Image_show;
+@property(nonatomic, assign) int maxImageShowNumber;
 //当前可选最大图片数
-@property (nonatomic, assign) int maximumImage;
-
-
-@property (nonatomic,strong)UIView *BlankImgV;
-
+@property(nonatomic, assign) int maximumImage;
+@property(nonatomic, strong) UIView *BlankImgV;
 //遵循协议的一个代理变量定义
-@property (nonatomic, weak) id<SelectPhotosDelegate> delegate;
+@property(nonatomic, weak) id<SelectPhotosDelegate> delegate;
+@property(nonatomic, assign) CGRect defaultFrame;
 
-@property(nonatomic,assign)CGRect defaultFrame;
-
-#pragma mark- 图片宽度是定值63
--(void)ImageView_init_max_imgs2:(int)max_imgs;
-
-//-(void)Data_init:(CGRect)rect;
+#pragma mark - 图片宽度是定值63
+- (void)imageViewInitMaxImages2:(int)max_imgs imgWidth:(float)imgWidth;
+#pragma mark - 更新显示页面
 - (void)resetImages;
-#pragma  mark  显示本地图片
--(void)resetImages_with_filePath;
-
-#pragma  mark  显示网络图片
--(void)resetImagesWithNetUrlFilePathArray:(NSArray*)FilePathArray;
-
+#pragma mark 显示本地图片
+- (void)resetImagesWithFilePath;
+#pragma mark 显示网络图片
+- (void)resetImagesWithNetUrlFilePathArray:(NSArray *)FilePathArray;
 #pragma mark - 设置当前编辑状态
 - (void)resetEditState:(BOOL)isEdit;
+
 @end
