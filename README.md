@@ -34,7 +34,8 @@ ImagesShow
      
 
 3、实现代理回调，点击编辑和展示按钮实现相应功能
-        #pragma mark - SelectPhotos Delegate  返回选择的图片地址数组
+
+        //SelectPhotos Delegate  返回选择的图片地址数组
         - (void)imgfilePathArray:(NSMutableArray *)filePathArray
         heights:(float)heights {
         //更新高度
