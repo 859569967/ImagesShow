@@ -11,5 +11,5 @@
 
 @interface ViewController : UIViewController
 
-@property(strong, nonatomic) NSArray *file_pathArray;
+@property(strong, nonatomic) NSArray *filePathArray;
 @end
